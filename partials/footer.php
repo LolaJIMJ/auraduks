@@ -12,8 +12,8 @@
                                 </p>
                             <ul>
                                
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="tel:+2348146213678"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -32,14 +32,12 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Unity Estate. House 37 <br>Freedom Street</p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Unity Estate. <br>Ojodu Berger, Lagos</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+2349165432709">+2349165432787</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+2348146213678">+2348146213678</a></p>
                                 </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:auraduks@gmail.com">auraduks@gmail.com</a></p>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>

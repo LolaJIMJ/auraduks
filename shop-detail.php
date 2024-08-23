@@ -7,33 +7,12 @@ $cat = $category->getAllCategory();
 
 
 if(isset($_GET["id"])){
- //$gotten_cat=$category->getCategoryById($_GET['id']);   //featured product category
- // $cat_name=$category-> get_category_name_by_id($_GET["id"]);
- 
-}
-
-if(isset($_GET["id"])){
     $id = $_GET["id"];
     $product_details=$category->get_product_by_id($id);   
     }
     
-    
-    
-    
-     $product = new Product;
+    $product = new Product;
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -294,12 +273,9 @@ if(isset($_GET["id"])){
                                         <a class="btn hvr-hover" data-fancybox-close="" href="addtocart.php?id=<?php echo $product_details['product_id'] ?>>">Add to cart</a>
                                     </div>
                                 </div>
-                              
-
-                               
-                    </div>
-                </div>
-            </div>
+                              </div>
+                        </div>
+                     </div>
 
            
            
@@ -410,19 +386,13 @@ if(isset($_GET["id"])){
                                 <h4><a href="shop-detail.php?id=14">Vanilla Diorama</a></h4>
                                 <h5> &#8358;110,000</h5>
                                     
-                                    
                                 </div>
-                               
-                                
-                            </div>
+                               </div>
                         </div>
-
-                       
                     </div>
                 </div>
             </div> 
-
-        </div>
+             </div>
     </div>
     <!-- End Cart -->
 

@@ -90,7 +90,7 @@ $current_trans_ref = null;
 					</select>
                     </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +2349165432709</a></p>
+                        <p>Call US :- <a href="tel:+234814621367">+234814621367</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
@@ -249,8 +249,8 @@ if (isset($_SESSION['message'])) {
                 <td><img src="admin/uploads/<?php echo htmlspecialchars($transaction['product_image']); ?>" 
                              alt="<?php echo htmlspecialchars($transaction['product_name']); ?>" 
                              width="50" height="50">
-                    <!-- <img src="<?//php echo $transaction['product_image']; ?>" alt="<?//php echo $transaction['product_name']; ?>" width="50" height="50"></td> -->
-                <td><?php echo $transaction['det_qty']; ?></td>
+                   
+    <td><?php echo $transaction['det_qty']; ?></td>
                 <td><?php echo $transaction['product_price']; ?></td>
                 <td><?php echo $transaction['det_amt']; ?></td>
                 <td><?php echo $transaction['trans_date']; ?></td>

@@ -118,4 +118,3 @@ public function get_product_count_per_category() {
 }
  }
 
-?>

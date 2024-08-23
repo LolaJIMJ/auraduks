@@ -7,4 +7,3 @@
     define("DBUSER", "root");
     define("DBPASS", "");
 
-?>

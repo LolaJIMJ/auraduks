@@ -11,14 +11,22 @@ $u = new User;
 
 $reference = isset($_SESSION['refno']) ? $_SESSION['refno'] : 0;
 
+// Paystack API processing using the total amount...
+
+
 if ($reference) {
     $deets = $u->get_user_by_id($_SESSION['useronline']);
     $email = $deets['user_email'];
     $amount = $t->get_transaction_amt($reference);
 
+    
     // Include the shipping cost
+   
     $shipping_cost = isset($_SESSION['shipping_cost']) ? $_SESSION['shipping_cost'] : 0;
-    $grand_total = ($amount + $shipping_cost) * 100; // Convert to kobo
+    $grand_total = $amount + $shipping_cost; // Total amount including shipping
+
+    // Convert grand total to kobo (Paystack expects the amount in kobo)
+    $grand_total_in_kobo = $grand_total * 100; 
 
     // Debugging output
     echo "Reference: $reference<br>";
@@ -26,8 +34,9 @@ if ($reference) {
     echo "Amount: $amount<br>";
     echo "Shipping Cost: $shipping_cost<br>";
     echo "Grand Total: $grand_total<br>";
+    echo "Grand Total in Kobo: $grand_total_in_kobo<br>";
 
-    $payresponse = $pay->paystack_initialize($email, $grand_total, $reference);
+    $payresponse = $pay->paystack_initialize($email, $grand_total_in_kobo, $reference);
 
     // Check if the Paystack API call was successful
     if ($payresponse) {
@@ -55,4 +64,5 @@ if ($reference) {
     header("Location: shop.php");
     exit();
 }
-?>
+
+

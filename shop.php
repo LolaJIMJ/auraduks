@@ -13,7 +13,6 @@ if(isset($_GET["id"])){
  $gotten_cat=$category->getCategoryById($_GET['id']);
 
   
- 
 }
 
 
@@ -49,9 +48,7 @@ if(isset($_GET["id"])){
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
-    
-
-</head>
+    </head>
 
 <body>
 
@@ -84,7 +81,7 @@ if(isset($_GET["id"])){
 					</select>
                     </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +2349165432709</a></p>
+                        <p>Call US :- <a href="tel:+234814621367">+234814621367</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
@@ -177,10 +174,7 @@ if(isset($_GET["id"])){
                 <li class="cart-box">
                     <ul class="cart-list">
 
-                    
-
-           
-                       <li>
+                    <li>
                        <a class="btn btn-dark noround" href="cart.php">My Cart (<?php if(isset($_SESSION['product'])){echo count($_SESSION['product']);} ?>)</a>
                            
                     </ul>

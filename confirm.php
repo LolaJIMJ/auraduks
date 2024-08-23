@@ -9,8 +9,9 @@ require_once "classes/Transaction.php";
 
 
 $reference = isset($_SESSION['refno'])? $_SESSION['refno'] : 0;
-if(!$reference){  //in case session has times out...
+if(!$reference){  //in case session has timed out...
     header("location:shop.php");
+    exit();
 }
 
 // echo "<pre>";
@@ -23,8 +24,6 @@ $items = $t->get_transaction_byref($reference);
 // print_r($items);
 // echo "</pre>";
 ?>
-
-<a href="pay.php">Confirm Payment</a>
 
 <?php
 // die();
@@ -69,30 +68,43 @@ $items = $t->get_transaction_byref($reference);
          $sn ++ ;
         }
       }
-        
-         $formatted_total =number_format($total,2);
-        echo "<tr><td>TOTAL</td><td colspan='2'></td><td align='left'>&#8358; $formatted_total</td><td colspan='2'></td></tr>";
-        echo "</table>";
-        // echo "<div class='alert alert-info'>Your cart is empty</div>";
-?>
+
+ //  the shipping cost stored in the session
+$shipping_cost = isset($_SESSION['shipping_cost']) ? $_SESSION['shipping_cost'] : 0;
+
+// Calculate the grand total
+$grand_total = $total + $shipping_cost;
+
+// Stored the grand total in the session for later use in `pay.php`
+$_SESSION['grand_total'] = $grand_total;
+
+
+// Display the grand total to the user
+$formatted_total = number_format($total, 2);
+$formatted_grand_total = number_format($grand_total, 2);
+
+echo "<tr><td>Subtotal</td><td colspan='2'></td><td align='left'>&#8358; $formatted_total</td><td colspan='2'></td></tr>";
+echo "<tr><td>Shipping Cost</td><td colspan='2'></td><td align='left'>&#8358; $shipping_cost</td><td colspan='2'></td></tr>";
+echo "<tr><td>Grand Total</td><td colspan='2'></td><td align='left'>&#8358; $formatted_grand_total</td><td colspan='2'></td></tr>";
+
+echo "</table>";
+
+  ?>
 
   <a href="emptycart.php" class='btn btn-danger btn-lg noround'>Empty Cart</a>
    &nbsp; &nbsp; &nbsp;
    
    <a href="shop.php?id=<?php echo $categories['category_id'] ?>"class='btn btn-warning btn-lg noround'>Continue Shopping</a>
     &nbsp; &nbsp; &nbsp;
-  
-  
-
+     <!-- Link to Paystack payment -->
+     <a href="pay.php" class='btn btn-success btn-lg noround'>Confirm Payment</a>
 </div>
 </div>
-
-
-
 
 <?php
 require_once "partials/footer.php";
 ?>
+
 
 
 

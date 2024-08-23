@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2024 at 12:24 AM
+-- Generation Time: Aug 23, 2024 at 01:55 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -168,7 +168,37 @@ INSERT INTO `transaction` (`trans_id`, `trans_ref`, `trans_date`, `trans_totamt`
 (70, '17223629981240607718', '2024-07-30 18:09:58', 50000, 1, '20 Festac Estate', 'Lagos', '08056423671', NULL, NULL, 1, 1),
 (71, '1722369576773891243', '2024-07-30 19:59:36', 135000, 1, '12, Olalekan street, Palmgrove', 'Lagos', '08056423671', NULL, NULL, 0, 0),
 (72, '1722372693289295154', '2024-07-30 20:51:33', 18000, 1, '15, Ikoyi Johnson Avenue', 'Lagos', '08134765234', NULL, NULL, 0, 0),
-(73, '1722373731678910840', '2024-07-30 21:08:51', 12500, 1, '12, Olalekan street, Palmgrove', 'Lagos', '08134765234', NULL, NULL, 0, 0);
+(73, '1722373731678910840', '2024-07-30 21:08:51', 12500, 1, '12, Olalekan street, Palmgrove', 'Lagos', '08134765234', NULL, NULL, 0, 0),
+(74, '1723376797520343840', '2024-08-11 11:46:37', 90000, 9, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Oyo', '08064923986', NULL, NULL, 1, 0),
+(75, '1723376831514191885', '2024-08-11 11:47:11', 90000, 9, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Oyo', '08064923986', NULL, NULL, 1, 0),
+(76, '1723376904277293390', '2024-08-11 11:48:24', 90000, 1, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Oyo', '08056423671', NULL, NULL, 0, 1),
+(77, '17233769941110925253', '2024-08-11 11:49:54', 90000, 1, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Oyo', '08134765234', NULL, NULL, 0, 1),
+(78, '1723656347826806841', '2024-08-14 17:25:47', 8000, 1, '15, Ikoyi Johnson Avenue', 'Lagos', '08067654324', NULL, NULL, 0, 1),
+(79, '17236582731262424964', '2024-08-14 17:57:53', 45000, 1, '20 Festac Estate', 'Lagos', '08056423671', NULL, NULL, 0, 1),
+(80, '17237175931012420396', '2024-08-15 10:26:33', 180000, 1, '20 Festac Estate', 'Lagos', '08056423671', NULL, NULL, 0, 1),
+(81, '17237338431057221317', '2024-08-15 14:57:23', 18000, 1, '20, Coker Estate, Ado Ekiti', 'Ekiti', '09165423896', NULL, NULL, 0, 0),
+(82, '1723735590769111124', '2024-08-15 15:26:30', 18000, 1, '20 Festac Estate', 'Lagos', '08056423671', NULL, NULL, 0, 0),
+(83, '1723737725140657922', '2024-08-15 16:02:05', 50000, 2, '7, Blessed street Challenge, Ibadan', 'Oyo', '09165423678', NULL, NULL, 0, 1),
+(84, '17242396181243707609', '2024-08-21 11:26:58', 135000, 2, '15, adeboye street ikeja', 'Lagos', '09165423896', NULL, NULL, 0, 1),
+(85, '17242404681599465322', '2024-08-21 11:41:08', 135000, 2, '15, adeboye street ikeja', 'Lagos', '08134765234', NULL, NULL, 0, 1),
+(86, '1724241641994053442', '2024-08-21 12:00:41', 135000, 2, '20, Coker Estate, Ado Ekiti', 'Ekiti', '09165423896', NULL, NULL, 0, 1),
+(87, '17242418811380004804', '2024-08-21 12:04:41', 135000, 2, '20, Coker Estate, Ado Ekiti', 'Ekiti', '09165423896', NULL, NULL, 0, 1),
+(88, '1724242067528838409', '2024-08-21 12:07:47', 135000, 2, '20, Coker Estate, Ado Ekiti', 'Ekiti', '09165423896', NULL, NULL, 0, 1),
+(89, '17242429021566510577', '2024-08-21 12:21:42', 135000, 2, '20, Coker Estate, Ado Ekiti', 'Ekiti', '08056423671', NULL, NULL, 0, 1),
+(107, '17243406452025149039', '2024-08-22 15:30:45', 500000, 2, '20 Festac Estate', 'Lagos', '08056423671', NULL, NULL, 0, 1),
+(108, '17243445251995952923', '2024-08-22 16:35:25', 500000, 2, '15, adeboye street ikeja', 'Lagos', '09165423896', NULL, NULL, 0, 1),
+(109, '1724348124101357812', '2024-08-22 17:35:24', 8000, 1, '12, Olalekan street, Palmgrove', 'Lagos', '08134765234', NULL, NULL, 0, 0),
+(110, '17243485071428059383', '2024-08-22 17:41:47', 53000, 1, '13, Sanya street Oshodi', 'Lagos', '08056423671', NULL, NULL, 0, 0),
+(111, '17243496512124947289', '2024-08-22 18:00:51', 110000, 1, '12, Olalekan street, Palmgrove', 'Lagos', '09165423896', NULL, NULL, 0, 0),
+(112, '17243500631374289880', '2024-08-22 18:07:43', 42000, 1, '20, Coker Estate, Ado Ekiti', 'Ekiti', '09165423896', NULL, NULL, 0, 0),
+(113, '17243545161161551135', '2024-08-22 19:21:56', 22000, 1, '15, adeboye street ikeja', 'Lagos', '09165423896', NULL, NULL, 0, 0),
+(114, '1724363572528213107', '2024-08-22 21:52:52', 45000, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(115, '1724364269493915762', '2024-08-22 22:04:29', 57500, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(116, '17243657171562478394', '2024-08-22 22:28:37', 8000, 3, '13, Boulevard Lekki', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(117, '17243683772117591749', '2024-08-22 23:12:57', 16000, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(118, '17243695311038430611', '2024-08-22 23:32:11', 12000, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(119, '17243699271795434721', '2024-08-22 23:38:47', 12000, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0),
+(120, '1724370687934218128', '2024-08-22 23:51:27', 12000, 3, 'Morgan Estate Phase 2, Ojodu-Berger Lagos.', 'Lagos', '08156212134', NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -191,7 +221,49 @@ CREATE TABLE `trans_details` (
 INSERT INTO `trans_details` (`det_id`, `product_id`, `det_amt`, `det_transid`, `det_qty`) VALUES
 (173, 13, 135000, 71, 1),
 (174, 11, 18000, 72, 1),
-(175, 10, 12500, 73, 1);
+(175, 10, 12500, 73, 1),
+(176, 12, 45000, 74, 2),
+(177, 12, 45000, 75, 2),
+(184, 11, 18000, 81, 1),
+(185, 11, 18000, 82, 1),
+(193, 13, 135000, 90, 1),
+(194, 13, 135000, 91, 1),
+(195, 13, 135000, 92, 1),
+(196, 13, 135000, 93, 1),
+(197, 13, 135000, 94, 1),
+(198, 13, 135000, 95, 1),
+(199, 13, 135000, 96, 1),
+(200, 13, 135000, 97, 1),
+(201, 13, 135000, 98, 1),
+(202, 13, 135000, 99, 1),
+(203, 13, 135000, 100, 1),
+(204, 25, 230000, 100, 1),
+(205, 13, 135000, 101, 1),
+(206, 25, 230000, 101, 1),
+(207, 13, 135000, 102, 1),
+(208, 25, 230000, 102, 1),
+(209, 13, 135000, 103, 1),
+(210, 25, 230000, 103, 1),
+(211, 13, 135000, 104, 1),
+(212, 25, 230000, 104, 1),
+(213, 13, 135000, 105, 2),
+(214, 25, 230000, 105, 1),
+(215, 13, 135000, 106, 2),
+(216, 25, 230000, 106, 1),
+(221, 15, 8000, 109, 1),
+(222, 15, 8000, 110, 1),
+(223, 29, 45000, 110, 1),
+(224, 21, 110000, 111, 1),
+(225, 32, 42000, 112, 1),
+(226, 18, 22000, 113, 1),
+(227, 12, 45000, 114, 1),
+(228, 12, 45000, 115, 1),
+(229, 10, 12500, 115, 1),
+(230, 15, 8000, 116, 1),
+(231, 15, 8000, 117, 2),
+(232, 30, 12000, 118, 1),
+(233, 30, 12000, 119, 1),
+(234, 30, 12000, 120, 1);
 
 -- --------------------------------------------------------
 
@@ -213,7 +285,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `user_fname`, `user_lname`, `user_email`, `user_password`) VALUES
 (1, 'Bola', 'Pepper', 'bolapepper@gmail.com', '$2y$10$VtCAgUusCqMvlIilFFQb8uANde9F/mw.wKwZfG3oyztRe2ZuJMsGC'),
-(2, 'Temmy', 'Jones', 'temmy@gmail.com', '$2y$10$UJ1iCgXpe/jEPJSYPAwRe.VzFJkinlIqXgTeC/19ThL1.3TKhTuq2');
+(2, 'Temmy', 'Jones', 'temmy@gmail.com', '$2y$10$UJ1iCgXpe/jEPJSYPAwRe.VzFJkinlIqXgTeC/19ThL1.3TKhTuq2'),
+(3, 'Dorcas', 'Adeniji', 'adenijiololadeh@gmail.com', '$2y$10$p672YKzF8f.HVagrmVNOteNWfkgJRpl1z3OpbHFOgtWgqqtdEqrom');
 
 --
 -- Indexes for dumped tables
@@ -293,19 +366,19 @@ ALTER TABLE `shipping_costs`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `trans_details`
 --
 ALTER TABLE `trans_details`
-  MODIFY `det_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `det_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

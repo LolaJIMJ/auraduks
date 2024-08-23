@@ -82,7 +82,7 @@ if(isset($_GET["id"])){
 					</select>
                     </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +2349165432709</a></p>
+                        <p>Call US :- <a href="tel:+234814621367"> +234814621367</a></p>
                     </div>
                     <div class="our-link">
                         <ul>

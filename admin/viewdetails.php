@@ -84,7 +84,7 @@ include "topheader.php";
 </tbody>
 </table>
 
-<h5>Billing Address: <?php echo $shipping_address; ?></h5>
+<h5>Shipping Address: <?php echo $shipping_address; ?></h5>
 <h5>State: <?php echo $shipping_state; ?></h5>
 <h5>Phone Number: <?php echo $shipping_phone; ?></h5>
                         

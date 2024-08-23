@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 class Paystack {
 
     private $secret_key = 'sk_test_16b3a70caa2f193ba359f7ce963d03a895955726';
+    
 
     public function paystack_verify($reference) {
         $headers = [
@@ -26,6 +27,7 @@ class Paystack {
         }
     }
 
+   
     public function paystack_initialize($email, $amt, $ref) {
         $postRequest = [
             'email' => $email,
@@ -56,4 +58,4 @@ class Paystack {
         }
     }
 }
-?>
+

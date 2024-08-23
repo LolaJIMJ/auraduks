@@ -5,4 +5,3 @@
     header("location:loginsignup.php");
     exit();
  }
-?>

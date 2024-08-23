@@ -179,6 +179,12 @@ class Transaction extends Db{
         $stmt = $this->dbconn->prepare($query);
         $stmt->execute([$transaction_id]);
     }
+
+    public function update_transaction_status($transaction_id, $amount_paid) {
+        $query = "UPDATE transaction SET status = 'completed', amount_paid = ? WHERE trans_ref = ?";
+        $stmt = $this->dbconn->prepare($query);
+        $stmt->execute([$amount_paid, $transaction_id]);
+    }
     
-}
-?>
+    }
+

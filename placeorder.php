@@ -14,8 +14,22 @@ $shipping_costs = [
     "Abuja Doorstep" => 4500.00,
     "East" => 5000.00,
     "Other States" => 4000.00
+
+   
 ];
 $shipping_cost = isset($shipping_costs[$selected_shipping_option]) ? $shipping_costs[$selected_shipping_option] : 0.00;
+
+// Capture the total amount (including shipping cost)
+$total_amount = isset($_POST['total_amount']) ? $_POST['total_amount'] : 0;
+$reference = uniqid(); // Generate a unique reference for the transaction
+
+// Store the total amount in session for use in confirm.php
+$_SESSION['total_amount'] = $total_amount;
+$_SESSION['refno'] = $reference;
+
+
+// Redirect to confirm.php or directly to pay.php
+header("Location: confirm.php");
 
 // Store shipping cost in session
 $_SESSION['shipping_cost'] = $shipping_cost;
@@ -59,4 +73,8 @@ if (isset($_SESSION['product']) && !empty($_SESSION['product'])) {
     header("location:shop.php");
     exit();
 }
-?>
+
+
+
+
+

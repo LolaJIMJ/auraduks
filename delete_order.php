@@ -13,4 +13,4 @@ if (isset($_POST['trans_id'])) {
     header("Location: myaccount.php");
     exit();
 }
-?>
+

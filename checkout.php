@@ -120,7 +120,7 @@ if(isset($_GET["id"])){
 					</select>
                     </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#">+2349165432709</a></p>
+                        <p>Call US :- <a href="tel:+234814621367">+234814621367</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
@@ -395,11 +395,12 @@ if(isset($_GET["id"])){
                            <!-- new form -->
 
                            <div class="col-sm-6 col-lg-6 mb-3">
-            <div class="shipping-method-box">
+            <div  class="shipping-method-box">
                 <div class="title-left">
                     <h3>Shipping Method</h3>
                 </div>
-                <div class="mb-4">
+
+               <div class="mb-4">
                     <div class="custom-control custom-radio">
                         <input id="shippingOption1" name="shipping_option" class="custom-control-input" checked="checked" type="radio" value="Lagos">
                         <label class="custom-control-label" for="shippingOption1">Lagos: Door step</label>
@@ -426,6 +427,7 @@ if(isset($_GET["id"])){
         <button class="btn btn-danger btn-lg btn-block" type="submit">Place Order</button>
     </form>
 
+    
     <hr class="mb-4">
         </div>
         </div>
@@ -472,7 +474,7 @@ if(isset($_GET["id"])){
     </div>
 </div>
 
-                  <div class="col-md-12 col-lg-12">
+     <div class="col-md-12 col-lg-12">
     <div class="order-box">
         <div class="title-left">
             <h3>Your order</h3>
@@ -482,6 +484,8 @@ if(isset($_GET["id"])){
             <div class="ml-auto font-weight-bold">Total</div>
         </div>
         <hr class="my-1">
+
+        
         <div class="d-flex">
             <h4>Sub Total</h4>
             <div class="ml-auto font-weight-bold"> ₦<?php echo number_format($total); ?> </div>
@@ -492,14 +496,20 @@ if(isset($_GET["id"])){
             <div class="ml-auto font-weight-bold" id="shippingCost">₦0.00</div>
         </div>
         <hr>
+
         <div class="d-flex gr-total">
             <h5>Grand Total</h5>
-            <div class="ml-auto h5" id="grandTotal"> &#8358; <?php
-                $formatted_total = number_format($total, 2);
-                echo $formatted_total; 
-            ?></div>
-            
-             
+            <div class="ml-auto h5" id="grandTotal">₦<?php echo number_format($total, 2); ?></div>
+        </div>
+        
+       
+            <!-- <div class="d-flex gr-total">
+                <div class="ml-auto h5">
+                <input type="hidden" name="total_amount" id="totalAmount" value="<?php echo $total; ?>">
+                </div>
+            </div> -->
+           
+
         </div>
         <hr>
     </div>
@@ -526,7 +536,7 @@ if(isset($_GET["id"])){
                                 </p>
                             <ul>
                                
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                <li><a href="tel:+234814621367"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -545,15 +555,13 @@ if(isset($_GET["id"])){
                         <div class="footer-link-contact">
                             <h4>Contact Us</h4>
                             <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Unity Estate. House 37 <br>Freedom Street</p>
+                            <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Unity Estate. <br>Ojodu Berger, Lagos</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+2349165432709">+2349165432787</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+2348146213678">+2348146213678</a></p>
                                 </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:auraduks@gmail.com">auraduks@gmail.com</a></p>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -570,6 +578,42 @@ if(isset($_GET["id"])){
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+
+    <script>
+    // Define your shipping costs
+    const shippingCosts = {
+        "Lagos": 3500,
+        "Customer Pick-up": 0,
+        "Abuja Doorstep": 4500,
+        "Other States": 4000
+    };
+
+    // Function to update the shipping cost and grand total
+    function updateTotals() {
+        const selectedShippingOption = document.querySelector('input[name="shipping_option"]:checked').value;
+        const shippingCost = shippingCosts[selectedShippingOption];
+        const subTotal = parseFloat(<?php echo $total; ?>);
+        const grandTotal = subTotal + shippingCost;
+
+        // Update the shipping cost display
+        document.getElementById('shippingCost').innerText = '₦' + shippingCost.toLocaleString();
+
+        // Update the grand total display
+        document.getElementById('grandTotal').innerText = '₦' + grandTotal.toLocaleString();
+
+        // Update the hidden input field for the total amount
+        document.getElementById('totalAmount').value = grandTotal;
+    }
+
+    // Add event listeners to the shipping options
+    document.querySelectorAll('input[name="shipping_option"]').forEach(function (radio) {
+        radio.addEventListener('change', updateTotals);
+    });
+
+    // Initialize totals on page load
+    document.addEventListener('DOMContentLoaded', updateTotals);
+</script>
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -589,35 +633,7 @@ if(isset($_GET["id"])){
     <script src="js/custom.js"></script>
 
 
-
     <script>
-        $(document).ready(function(){
-            $('input[name="shipping_option"]').on('change', function(){
-                var shippingCost = 0;
-                var selectedOption = $(this).val();
-                switch(selectedOption) {
-                    case 'Lagos':
-                        shippingCost = 3500;
-                        break;
-                    case 'Customer Pick-up':
-                        shippingCost = 0;
-                        break;
-                    case 'Abuja Doorstep':
-                        shippingCost = 4500;
-                        break;
-                    case 'Other States':
-                        shippingCost = 4000;
-                        break;
-                }
-                $('#shippingCost').text(shippingCost.toFixed(2));
-                var subtotal = parseFloat($('#subtotal').text().replace(/,/g, ''));
-                var grandTotal = subtotal + shippingCost;
-                $('#grandTotal').text(grandTotal.toFixed(2));
-            });
-        });
-    </script>
-
-<script>
         $(document).ready(function() {
             $(".toggle-password").click(function() {
                 $(this).toggleClass("fa-eye fa-eye-slash");
@@ -631,14 +647,8 @@ if(isset($_GET["id"])){
         });
     </script>
 
-
 </body>
-
 </html>
-
-<?php
-//require_once "partials/footer.php";
-?>
 
 
 
