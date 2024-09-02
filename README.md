@@ -11,10 +11,16 @@ From luxurious perfumes to soothing essential oils and elegant diffusers, our co
 
 ## Features
 
-- **User-Friendly Interface:** Intuitive design for easy navigation and a pleasant shopping experience.
-- **Diverse Product Range:** Wide variety of fragrances, perfumes, oils, diffusers, and more.
-- **Secure Transactions:** Safe and reliable payment processing to protect your personal information.
-- **Exclusive Offers:** Special promotions and discounts to enhance your shopping experience.
+- User-Friendly Interface:** Intuitive design for easy navigation and a pleasant shopping experience.
+- Diverse Product Range:** Wide variety of fragrances, perfumes, oils, diffusers, and more.
+- Secure Transactions:** Safe and reliable payment processing to protect your personal information.
+- Exclusive Offers:** Special promotions and discounts to enhance your shopping experience.
+- User Authentication: Secure login and registration process for customers and vendors.
+- Product Management: Admin can easily add, edit, and manage their products, including uploading images and setting prices.
+- Shopping Cart: Customers can browse products, add them to their cart, and proceed to checkout.
+- Checkout Process: Integrated with Paystack, the platform ensures secure payment processing. Shipping options are available to suit various customer preferences.
+- Admin Dashboard: Comprehensive admin features allow for managing users, products, orders, and tracking overall platform performance.
+- Responsive Design: The platform is designed to be fully responsive, providing a seamless experience across devices.
 
 ## Technologies Used
 
@@ -22,7 +28,6 @@ From luxurious perfumes to soothing essential oils and elegant diffusers, our co
 - **Backend:** PHP OOP (Object-Oriented Programming)
 - **Database:** MySQL
 - **Payment Gateway:** Paystack
-- **Version Control:** Git & GitHub
 
 
 
